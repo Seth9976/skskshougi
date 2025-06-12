@@ -1,0 +1,40 @@
+package com.google.android.gms.auth.api.credentials.internal;
+
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+import com.google.android.gms.auth.api.credentials.Credential;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+
+public final class DeleteRequest implements SafeParcelable {
+    public static final Parcelable.Creator CREATOR;
+    final int zzCY;
+    private final Credential zzPb;
+
+    static {
+        DeleteRequest.CREATOR = new zze();
+    }
+
+    DeleteRequest(int version, Credential credential) {
+        this.zzCY = version;
+        this.zzPb = credential;
+    }
+
+    public DeleteRequest(Credential credential) {
+        this(1, credential);
+    }
+
+    @Override  // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public Credential getCredential() {
+        return this.zzPb;
+    }
+
+    @Override  // android.os.Parcelable
+    public void writeToParcel(Parcel out, int flags) {
+        zze.zza(this, out, flags);
+    }
+}
+

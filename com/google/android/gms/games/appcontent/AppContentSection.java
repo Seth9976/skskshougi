@@ -1,0 +1,29 @@
+package com.google.android.gms.games.appcontent;
+
+import android.os.Bundle;
+import android.os.Parcelable;
+import com.google.android.gms.common.data.Freezable;
+import java.util.List;
+
+public interface AppContentSection extends Parcelable, Freezable {
+    List getActions();
+
+    Bundle getExtras();
+
+    String getId();
+
+    String getTitle();
+
+    String getType();
+
+    String zzrP();
+
+    List zzrZ();
+
+    String zzsb();
+
+    List zzsj();
+
+    String zzsk();
+}
+

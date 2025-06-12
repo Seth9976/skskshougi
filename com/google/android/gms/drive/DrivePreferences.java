@@ -1,0 +1,31 @@
+package com.google.android.gms.drive;
+
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+
+public class DrivePreferences implements SafeParcelable {
+    public static final Parcelable.Creator CREATOR;
+    final int zzCY;
+    final boolean zzadh;
+
+    static {
+        DrivePreferences.CREATOR = new zze();
+    }
+
+    DrivePreferences(int versionCode, boolean syncOverWifiOnly) {
+        this.zzCY = versionCode;
+        this.zzadh = syncOverWifiOnly;
+    }
+
+    @Override  // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override  // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int flags) {
+        zze.zza(this, parcel, flags);
+    }
+}
+

@@ -1,0 +1,12 @@
+package com.google.android.gms.drive.query.internal;
+
+import com.google.android.gms.drive.query.Filter;
+import com.google.android.gms.drive.query.zzc;
+
+public abstract class AbstractFilter implements Filter {
+    @Override
+    public String toString() {
+        return String.format("Filter[%s]", this.zza(new zzc()));
+    }
+}
+

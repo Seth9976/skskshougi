@@ -1,0 +1,42 @@
+package com.google.android.gms.drive.internal;
+
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+import com.google.android.gms.drive.Contents;
+
+public class OnContentsResponse implements SafeParcelable {
+    public static final Parcelable.Creator CREATOR;
+    final int zzCY;
+    final Contents zzafa;
+    final boolean zzage;
+
+    static {
+        OnContentsResponse.CREATOR = new zzau();
+    }
+
+    OnContentsResponse(int versionCode, Contents contents, boolean outOfDate) {
+        this.zzCY = versionCode;
+        this.zzafa = contents;
+        this.zzage = outOfDate;
+    }
+
+    @Override  // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override  // android.os.Parcelable
+    public void writeToParcel(Parcel dest, int flags) {
+        zzau.zza(this, dest, flags);
+    }
+
+    public Contents zzpJ() {
+        return this.zzafa;
+    }
+
+    public boolean zzpK() {
+        return this.zzage;
+    }
+}
+
